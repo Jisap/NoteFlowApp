@@ -1,9 +1,9 @@
 
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
     <div className="bg-gradient-to-bottom py-10">
-      Header
+      { children }
     </div>
   )
 }
