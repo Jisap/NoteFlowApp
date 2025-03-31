@@ -3,9 +3,12 @@ import { navigationLinks } from "../../utils/content";
 
 const Navigation = () => {
   return (
-    <nav>
-      <a href="/">
-        <Logo />
+    <nav className="text-primary-50 m-auto flex justify-between max-w-[90rem] px-24 text-lg/8 font-light">
+      <a href="/" className="flex items-center gap-x-3">
+        <Logo 
+          className="h-6"
+          width={5}
+        />
         <p>
           NoteFlow
         </p>
