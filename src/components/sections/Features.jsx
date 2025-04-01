@@ -36,12 +36,12 @@ const Features = () => {
           </div>
         </div>
 
-        <div>
-          <div>
-            <p>
+        <div className="grid grid-cols-2 items-center gap-x-16">
+          <div className="max-w-lg justify-self-start">
+            <p className="mb-8 text-5xl/16 font-semibold tracking-tighter">
               Contextual Reminders
             </p>
-            <p>
+            <p className="text-primary-100 z-1 text-xl/loose font-light">
               {" "}
               Stay on top of important tasks with AI-powered reminders that
               adapt to the context of your notes. NoteFlow recognizes deadlines,
@@ -53,6 +53,7 @@ const Features = () => {
             <img
               src={ContextualReminders}
               alt="Contextual Reminders IPhone Graphic"
+              className="max-h-[45rem]"
             />
           </figure>
         </div>
