@@ -44,10 +44,16 @@ const FAQs = () => {
           </p>
         </div>
 
-        <ul>
+        <ul className="mb-16 flex flex-wrap justify-center gap-x-3 gap-y-4">
           {frequentlyAskedQuestions.map((obj) => (
             <li key={obj.id}>
-              <button onClick={() => handleCategoryClick(obj.category)}>
+              <button 
+                className={`
+                border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8
+                  ${obj.category === category && "bg-primary-500 text-primary-1300 border-primary-500 primary-glow"}
+                `}
+                onClick={() => handleCategoryClick(obj.category)}
+              >
                 {obj.category}
               </button>
             </li>
