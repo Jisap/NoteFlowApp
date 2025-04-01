@@ -5,8 +5,8 @@ const Logos = () => {
   return (
     <section className="bg-gradient-to-top">
       <div className="m-auto max-w-[90rem] px-24 py-28">
-        <p className="text-primary-50 m-auto mb-20">
-          Organizations powered by <span>NoteFlow</span>{" "}
+        <p className="text-primary-50 m-auto mb-20 text-center text-xl">
+          Organizations powered by <span className="font-bold tracking-tight">NoteFlow</span>{" "}
         </p>
         <div>
           <ul>
