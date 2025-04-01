@@ -21,21 +21,26 @@ const FAQs = () => {
 
   }
 
-  const handleCategoryClick = () => { // Establece el estado de la categoría seleccionada
+  const handleCategoryClick = (category) => { // Establece el estado de la categoría seleccionada
     setActiveQuestion(null)
     setCategory(category)
+    console.log("category", category);
   }
 
   return (
-    <section>
-      <div>
-        <h2>Frequently Asked Question</h2>
+    <section className="bg-gradient-to-bottom justify-items-center">
+      <div className="w-full max-w-[90rem] py-32">
+        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter">
+          Frequently Asked Question
+        </h2>
         
-        <div>
-          <p>
+        <div className="mb-8 text-xl/loose font-light">
+          <p className="text-primary-100 text-center">
             The most commonly asked question about NoteFlow.<br/>
             Have any other questions ?{" "} 
-            <a href="#">Chat with our expert tech team</a>
+            <a href="#" className="underline decoration-1 underline-offset-3">
+              Chat with our expert tech team
+            </a>
           </p>
         </div>
 
