@@ -6,27 +6,28 @@ import ContextualReminders from "../../assets/graphics/ContextualReminders.webp"
 
 const Features = () => {
   return (
-    <section>
-      <div>
-        <div />
+    <section className="bg-primary-1500 overflow-hidden bg-[url('../../assets/noise.webp')] bg-repeat">
+      <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32">
+        <div className="bg-primary-1300  -translate-[50%] absolute top-[50%] left-[100%] h-[62.5rem] w-[62.5rem] rounded-full opacity-100 blur-[40rem]" />
         
-        <h2>
+        <h2 className="mb-28 text-center text-6xl/18 font-semibold tracking-tighter">
           All The Tools You Need to <br />
-          <span>Supercharge </span> Your Note Taking
+          <span className="text-primary-500 primary-glow">Supercharge </span> Your Note Taking
         </h2>
 
-        <div>
+        <div className="grid grid-cols-2 items-center gap-x-16">
           <figure>
             <img 
               src={SmartOganization}
               alt="Smart Organization IPhone Graphic"
+              className="max-h-[45rem]"
             />
           </figure>
-          <div>
-            <p>
+          <div className="z-1 max-w-lg justify-self-end">
+            <p className="mb-8 text-5xl/16 font-semibold tracking-tighter">
               Smart Organization
             </p>
-            <p>
+            <p className="text-primary-100 z-1 text-xl/loose font-light">
               Automatically categorize and tag your notes using AI-driven
               analysis. NoteFlow intelligency identifies hay topics and
               organizes your content, making it easy to find and retrieve
@@ -51,7 +52,7 @@ const Features = () => {
           <figure>
             <img
               src={ContextualReminders}
-              alt="Smart Organization IPhone Graphic"
+              alt="Contextual Reminders IPhone Graphic"
             />
           </figure>
         </div>
