@@ -6,7 +6,7 @@ import ContextualReminders from "../../assets/graphics/ContextualReminders.webp"
 
 const Features = () => {
   return (
-    <section className="bg-primary-1500  bg-[url('../../assets/noise.webp')] bg-repeat">
+    <section className="bg-primary-1500 overflow-hidden bg-[url('../../assets/noise.webp')] bg-repeat">
       <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32">
         <div className="bg-primary-1300  -translate-[50%] absolute top-[50%] left-[100%] h-[62.5rem] w-[62.5rem] rounded-full opacity-100 blur-[40rem]" />
         
