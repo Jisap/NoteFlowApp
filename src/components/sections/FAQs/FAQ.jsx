@@ -56,6 +56,8 @@ const FAQ = ({
             paddingTop: "1rem",
           } : {}
         }
+        transition={{duration: 0.3, ease: "easeIn"}}
+        layout
       >
         {question.answer}
       </motion.p>
