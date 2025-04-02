@@ -1,6 +1,7 @@
 import { useState } from "react"
 import TestimonialsList from "./TestimonialsList";
 import { testimonials as test } from "../../../utils/content";
+import CaretUp from "../../icons/CaretUp";
 
 const Testimonials = () => {
 
@@ -34,8 +35,17 @@ const Testimonials = () => {
           />
         </div>
 
-        <button>
+        <button
+          className="flex text-primary-50 border-primary-50 transition-properties hover:bg-primary-50 hover:text-primary-1300 
+          group cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 text-lg/8"
+          onClick={() => setExpanded((curr) => !curr)}
+        >
           {expanded ? "Show less" : "Show more"}
+          <CaretUp 
+            className={`stroke-primary-50 group-hover:stroke-primary-1300 rotate-180 transition-all duration-300 ${expanded ? "rotate-360" : ""}`}
+            alt="CaretUp icon"
+            width={2}
+          />
         </button>
       </div>
     </section>
