@@ -1,8 +1,14 @@
+import Testimonial from "./Testimonial"
 
 
-const TestimonialsList = () => {
+
+const TestimonialsList = ({ testimonials }) => {
   return (
-    <div>TestimonialsList</div>
+    <ul className="flex flex-col gap-y-6">
+      {testimonials.map((test) => (
+        <Testimonial key={test.name} test={test} />
+      ))}
+    </ul>
   )
 }
 
