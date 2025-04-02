@@ -14,7 +14,7 @@ const FAQs = () => {
 
   const questionsArr = categoryObj.questions;
 
-  const handleQuestionClick = (id) => { // Establece como activa la pregunta seleccionada y vicebersa
+  const handleQuestionClick = (id) => { // Establece como activa la pregunta seleccionada y viceversa
     id === activeQuestion 
       ? setActiveQuestion(null)
       : setActiveQuestion(id)
@@ -51,6 +51,7 @@ const FAQs = () => {
                 className={`
                 border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8
                   ${obj.category === category && "bg-primary-500 text-primary-1300 border-primary-500 primary-glow"}
+                  ${obj.category !== category && "hover:bg-primary-50 hover:text-primary-1300"}
                 `}
                 onClick={() => handleCategoryClick(obj.category)}
               >
