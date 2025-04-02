@@ -22,7 +22,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div>
+        <div className="mb-20 grid grid-cols-3 gap-x-6">
           <TestimonialsList
             textimonials={test.slice(0, expanded ? 5 : 2)}
           />
