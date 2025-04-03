@@ -4,9 +4,9 @@ import  Star  from "../../icons/Star.jsx"
 const Testimonial = ({ test }) => {
   return (
     <motion.li
-    
+      className="bg-primary-1300 rounded-2xl px-8 py-10"
     >
-      <div>
+      <div className="flex gap-x-1 pb-8">
         {Array.from({length: test.rating }).map((_, i) => (
           <Star key={i} className="fill-primary-100" alt="Filled star icon"/>
         ))}
@@ -15,18 +15,23 @@ const Testimonial = ({ test }) => {
         ))}
       </div>
 
-      <p>
+      <p className="text-primary-50 pb-16 text-lg/loose font-light">
         {test.description}
       </p>
 
-      <div>
+      <div className="flex items-center gap-x-6">
         <img
           src={test.src}
           alt="Portrait Headshot"
+          className="h-18 rounded-full"
         />
         <div>
-          <p>{test.name}</p>
-          <p>{test.title}</p>
+          <p className="text-primary-500 text-xl/7 font-bold tracking-tight">
+            {test.name}
+          </p>
+          <p className="text-primary-75 text-base/loose tracking-tight">
+            {test.title}
+          </p>
         </div>
       </div>
     </motion.li>
