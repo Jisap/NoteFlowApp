@@ -6,7 +6,10 @@ const TestimonialsList = ({ testimonials }) => {
   return (
     <ul className="flex flex-col gap-y-6">
       {testimonials.map((test) => (
-        <Testimonial key={test.name} test={test} />
+        <Testimonial 
+          key={test.name} 
+          test={test} 
+        />
       ))}
     </ul>
   )
