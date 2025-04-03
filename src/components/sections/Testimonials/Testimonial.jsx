@@ -4,6 +4,12 @@ import  Star  from "../../icons/Star.jsx"
 const Testimonial = ({ test }) => {
   return (
     <motion.li
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: "100%" }}
+      transition={{
+        opacity: { duration: 0.7, ease: "easeInOut" },
+      }}
       className="bg-primary-1300 rounded-2xl px-8 py-10"
     >
       <div className="flex gap-x-1 pb-8">
