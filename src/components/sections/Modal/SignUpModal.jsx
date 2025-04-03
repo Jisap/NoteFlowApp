@@ -81,13 +81,22 @@ const SignUpModal = () => {
         </div>
 
         <div>
-          <div onClick={() => setChecked((prev) => !prev)}>
-            <button>
-              <Checkmark />
+          <div 
+            onClick={() => setChecked((prev) => !prev)}
+            className="m-auto mb-4 w-fit cursor-pointer gap-x-2"
+          >
+            <button
+              className={`border-primary-100 transition-properties mr-2 inline-flex h-4 w-4 cursor-pointer items-center justify-center
+              rounded-sm border-2 ${checked && "bg-primary-100" }`}
+            >
+              <Checkmark className="stroke-primary-1500" />
             </button>
-            <p>I agree to all terms</p>
+            <p className="text-primary-100 inline cursor-pointer text-sm">I agree to all terms</p>
           </div>
-          <button onClick={ handleSubmit }>
+          <button 
+            onClick={ handleSubmit }
+            className="bg-primary-500 primary-glow-hover transition-properties w-full cursor-pointer rounded-full py-4 text-lg/8"
+          >
             Get Started
           </button>
         </div>
