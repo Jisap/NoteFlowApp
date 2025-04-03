@@ -1,5 +1,6 @@
 import FAQs from "./components/sections/FAQs/FAQs";
 import Features from "./components/sections/Features";
+import Footer from "./components/sections/Footer";
 import Header from "./components/sections/Header";
 import Hero from "./components/sections/Hero";
 import Logos from "./components/sections/Logos";
@@ -17,12 +18,15 @@ function App() {
         <Hero />
         <Reviews />
       </Header>
+      
       <Main>
         <Logos />
         <Features />
         <FAQs />
         <Testimonials />
       </Main>
+
+      <Footer />
     </Page>
   )
 }
