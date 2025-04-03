@@ -2,7 +2,9 @@
 
 const SignUpModal = () => {
   return (
-    <div>SignUpModal</div>
+    <div className="z-20">
+      SignUpModal
+    </div>
   )
 }
 
