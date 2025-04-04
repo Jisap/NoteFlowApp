@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const ModalContext = createContext();
 
 export const ModalContextProvider = ({ children }) => {
-  const [activeModal, setActiveModal] = useState("sign-up");
+  const [activeModal, setActiveModal] = useState("");
 
   return (
     <ModalContext.Provider value={{ activeModal, setActiveModal }}>

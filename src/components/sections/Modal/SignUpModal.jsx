@@ -1,6 +1,7 @@
 import Close from "../../icons/Close"
 import Checkmark from "../../icons/Checkmark"
 import { useState } from "react"
+import { useModalContext } from "../../../context/ModalContext"
 
 
 
@@ -13,6 +14,7 @@ const SignUpModal = () => {
 
   const [checked, setChecked] = useState(false)
   const [input, setInput] = useState(initialState)
+  const { setActiveModal } = useModalContext()
 
   const handleInputs = (e) => {
     setInput((prevInputs) => {
@@ -28,10 +30,11 @@ const SignUpModal = () => {
     if(checked){
       console.log(input)
       setInput(initialState)
-      // TODO: close modal
+      setActiveModal("") // Close modal after submit
       // TODO: submit data to database
     }
   }
+
 
   return (
     <section className="grid grid-cols-2 max-w-3xl ">
@@ -45,11 +48,15 @@ const SignUpModal = () => {
       </div>
 
       <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 noise bg-repeat p-10">
-        <button className="border-primary-75 hover:bg-primary-75 group transition-properties ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3">
+        <button 
+          className="border-primary-75 hover:bg-primary-75 group transition-properties ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
+          onClick={() => setActiveModal("")}
+        >
           <Close 
             className="stroke-primary-75 group-hover:stroke-primary-1300 transition-properties"
             width={2}
           />
+
         </button>
 
         <div className="text-primary-50 flex flex-col gap-y-6 text-lg/8 font-semibold tracking-tight">

@@ -6,8 +6,8 @@ import { useModalContext } from "../../../context/ModalContext"
 
 const Modal = ({ children, modal }) => {
 
-  const { activeModal } = useModalContext()
-  const activelyDisplayedModal = modal === activeModal; // Si el argumento =  a activeModal ("sign-up"), entonces es true
+  const { activeModal, setActiveModal } = useModalContext()
+  const activelyDisplayedModal = modal === activeModal; // Si el argumento "modal" =  a activeModal ("sign-up"), entonces es true -> visible
 
   return (
     <motion.div
@@ -18,6 +18,7 @@ const Modal = ({ children, modal }) => {
       }}
       animate={activelyDisplayedModal ? "visible" : "hidden"}
       transition={{ duration: 0.25, ease: "easeInOut" }}
+      onClick={(e) => e.currentTarget === e.target && setActiveModal("")} // Cerrar el modal cuando se hace click fuera del modal
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

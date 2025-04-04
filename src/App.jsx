@@ -32,7 +32,7 @@ function App() {
 
         <Footer />
 
-        <Modal name="sign-up">
+        <Modal modal="sign-up">
           <SignUpModal />
         </Modal>
       </Page>

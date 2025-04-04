@@ -1,9 +1,13 @@
 import ArrowRightLine from "../icons/ArrowRightLine";
 import ArrowRight from "../icons/ArrowRight";
 import HeroGraphic from "../../assets/graphics/HeroGraphic.webp";
+import { useModalContext } from "../../context/ModalContext";
 
 
 const Hero = () => {
+
+  const { setActiveModal } = useModalContext()
+
   return (
     <div className="m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-8 px-24 py-42">
       <div >
@@ -14,8 +18,10 @@ const Hero = () => {
           Let AI organize & summarize your notes, <br/>
           saving you time and boosting productivity.
         </p>
-        <button className="text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 
-        transition-properties primary-glow-hover primary-glow group flex cursor-pointer items-center gap-x-3 rounded-full px-8 py-3.5"
+        <button 
+          className="text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 
+          transition-properties primary-glow-hover primary-glow group flex cursor-pointer items-center gap-x-3 rounded-full px-8 py-3.5"
+          onClick={() => setActiveModal("sign-up")}
         >
           <p className="text-lg/8">
             Get Started
