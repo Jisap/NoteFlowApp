@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { frequentlyAskedQuestions } from "../../../utils/content"
 import FAQList from "./FAQList";
-//import FAQ from "./FAQ";
+
 
 const FAQs = () => {
 
@@ -29,8 +29,8 @@ const FAQs = () => {
 
   return (
     <section className="bg-gradient-to-bottom justify-items-center">
-      <div className="w-full max-w-[90rem] py-32">
-        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter">
+      <div className="w-full max-w-[90rem] py-32 max-xl:px-16 max-xl:py-24">
+        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/16">
           Frequently Asked Question
         </h2>
         
@@ -49,7 +49,7 @@ const FAQs = () => {
             <li key={obj.id}>
               <button 
                 className={`
-                border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8
+                border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 max-xl:px-6 max-xl:text-base/loose
                   ${obj.category === category && "bg-primary-500 text-primary-1300 border-primary-500 primary-glow"}
                   ${obj.category !== category && "hover:bg-primary-50 hover:text-primary-1300"}
                 `}
