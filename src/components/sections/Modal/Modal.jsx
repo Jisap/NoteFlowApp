@@ -1,11 +1,13 @@
 import { motion } from "motion/react"
+import { useModalContext } from "../../../context/ModalContext"
 
 
 
 
-const Modal = ({ children }) => {
+const Modal = ({ children, modal }) => {
 
-  const activelyDisplayedModal = true
+  const { activeModal } = useModalContext()
+  const activelyDisplayedModal = modal === activeModal; // Si el argumento =  a activeModal ("sign-up"), entonces es true
 
   return (
     <motion.div
