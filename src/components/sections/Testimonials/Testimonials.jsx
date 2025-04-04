@@ -9,12 +9,12 @@ const Testimonials = () => {
 
   return (
     <section className="bg-gradient-to-top">
-      <div className="m-auto flex max-w-[90rem] flex-col items-center px-24 py-32">
+      <div className="m-auto flex max-w-[90rem] flex-col items-center px-24 py-32 max-xl:px-16 max-xl:py-24">
         <div className="mb-20 flex max-w-[51.625rem] flex-col items-center gap-y-6">
           <p className="text-primary-1300 bg-primary-500 primary-glow w-min rounded-full px-4 py-2 text-base/8">
             Testimonials
           </p>
-          <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tighter">
+          <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tighter max-xl:text-5xl/16">
             What out AI-powered <br />
             notetaker have to say
           </h2>
@@ -23,7 +23,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="mb-20 grid grid-cols-3 gap-x-6">
+        <div className="mb-20 grid grid-cols-3 gap-x-6 max-xl:gap-x-4">
           <TestimonialsList
             testimonials={test.slice(0, expanded ? 5 : 2)}
           />
@@ -37,7 +37,7 @@ const Testimonials = () => {
 
         <button
           className="flex text-primary-50 border-primary-50 transition-properties hover:bg-primary-50 hover:text-primary-1300 
-          group cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 text-lg/8"
+          group cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 text-lg/8 max-xl:px-6 max-xl:py-3 max-xl:text-base/loose"
           onClick={() => setExpanded((curr) => !curr)}
         >
           {expanded ? "Show less" : "Show more"}
