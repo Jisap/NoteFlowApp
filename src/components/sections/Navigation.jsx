@@ -1,6 +1,7 @@
 import Logo from "../icons/Logo";
 import { navigationLinks } from "../../utils/content";
 import { useModalContext } from "../../context/ModalContext";
+import MobileMenuIcon from "./MobileMenu/MobileMenuIcon";
 
 const Navigation = () => {
 
@@ -8,7 +9,8 @@ const Navigation = () => {
 
 
   return (
-    <nav className="text-primary-50 m-auto flex justify-between max-w-[90rem] px-24 text-lg/8 font-light max-xl:px-16 max-xl:text-base/loose">
+    <nav className="text-primary-50 m-auto flex justify-between max-w-[90rem] px-24 text-lg/8 font-light max-xl:px-16 max-xl:text-base/loose
+    max-lg:px-8">
       <a href="/" className="flex items-center gap-x-3">
         <Logo 
           className="h-6"
@@ -19,7 +21,7 @@ const Navigation = () => {
         </p>
       </a>
 
-      <ul className="flex items-center gap-x-8 max-xl:gap-x-6">
+      <ul className="flex items-center gap-x-8 max-xl:gap-x-6 max-lg:hidden">
         {navigationLinks.map((link) => (
           <li key={link.id}>
             <a href={link.href} className="hover:text-primary-500 transition-properties">
@@ -29,7 +31,7 @@ const Navigation = () => {
         ))}
       </ul>
 
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center gap-x-3 max-lg:hidden">
         <button className="border-primary-50 transition-properties hover:bg-primary-50 hover:text-primary-1300
          box-border cursor-pointer rounded-full border-2 py-3.5 px-8 font-normal text-lg/8 max-xl:px-6 max-xl:py-3 max-xl:text-base/loose">
           Login
@@ -43,6 +45,8 @@ const Navigation = () => {
           Get Started
         </button>
       </div>
+
+      <MobileMenuIcon />
     </nav>
   )
 }
