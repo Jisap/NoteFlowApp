@@ -11,8 +11,21 @@ const MobileMenu = () => {
       <motion.div>
         <div>
           <button>
-            <Close className="stroke-primary-50 h-7 w-7" width={2} />
+            <Close  width={2} />
           </button>
+
+          <ul>
+            {navigationLinks.map((link) => (
+              <li key={link.id}>
+                <a href={link.href}>{link.link}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <button>Login</button>
+          <button>Get Started</button>
         </div>
       </motion.div>
     </motion.div>
