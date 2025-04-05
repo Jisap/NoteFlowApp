@@ -1,13 +1,21 @@
 import { motion } from "motion/react"
 import Close from "../../icons/Close"
 import { navigationLinks } from "../../../utils/content"
+import { useMobileMenuContext } from "../../../context/MobileMenuContext"
+import { useModalContext } from "../../../context/ModalContext"
 
 
 
 
 const MobileMenu = () => {
   
-  const mobileMenuOpen = true
+  const { mobileMenuOpen, setMobileMenuOpen } = useMobileMenuContext();
+  const { setActiveModal } = useModalContext();
+
+  const handleGetStarted = () => {
+    setMobileMenuOpen(false);
+    setActiveModal("sign-up");
+  }
 
   return (
     <motion.div
@@ -29,7 +37,10 @@ const MobileMenu = () => {
         className="bg-primary-1400 flex basis-80 flex-col justify-between rounded-2xl noise bg-repeat px-6 py-8"
       >
         <div>
-          <button className="border-primary-75 hover:bg-primary-75 group transition-properties mr-auto w-fit cursor-pointer rounded-2xl border-2 p-3">
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="border-primary-75 hover:bg-primary-75 group transition-properties mr-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
+          >
             <Close  
               width={2} 
               className="stroke-primary-75 group-hover:stroke-primary-1300 transition-properties h-4 w-4" 
@@ -56,8 +67,10 @@ const MobileMenu = () => {
           >
             Login
           </button>
-          <button className="bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50
+          <button 
+            className="bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50
            hover:bg-primary-50 primary-glow-hover transition-properties cursor-pointer rounded-full border-2 px-6 py-3 text-base/loose "
+            onClick={ handleGetStarted }
           >
             Get Started
           </button>

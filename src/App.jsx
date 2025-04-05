@@ -12,34 +12,37 @@ import Navigation from "./components/sections/Navigation";
 import Page from "./components/sections/Page";
 import Reviews from "./components/sections/Reviews";
 import Testimonials from "./components/sections/Testimonials/Testimonials";
+import { MobileMenuContextProvider } from "./context/MobileMenuContext";
 import { ModalContextProvider } from "./context/ModalContext";
 
 function App() {
   return (
-    <ModalContextProvider>
-      <Page>
-        <Header>
-          <Navigation />
-          <Hero />
-          <Reviews />
-        </Header>
+    <MobileMenuContextProvider>
+      <ModalContextProvider>
+        <Page>
+          <Header>
+            <Navigation />
+            <Hero />
+            <Reviews />
+          </Header>
 
-        <Main>
-          <Logos />
-          <Features />
-          <FAQs />
-          <Testimonials />
-        </Main>
+          <Main>
+            <Logos />
+            <Features />
+            <FAQs />
+            <Testimonials />
+          </Main>
 
-        <Footer />
+          <Footer />
 
-        <Modal modal="sign-up">
-          <SignUpModal />
-        </Modal>
+          <Modal modal="sign-up">
+            <SignUpModal />
+          </Modal>
 
-        <MobileMenu />
-      </Page>
-    </ModalContextProvider>
+          <MobileMenu />
+        </Page>
+      </ModalContextProvider>
+    </MobileMenuContextProvider>
   )
 }
 
