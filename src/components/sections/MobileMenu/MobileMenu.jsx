@@ -6,11 +6,26 @@ import { navigationLinks } from "../../../utils/content"
 
 
 const MobileMenu = () => {
+  
+  const mobileMenuOpen = true
+
   return (
     <motion.div
+      animate={ mobileMenuOpen ? "visible" : "hidden" }
+      variants={{   
+        hidden: { opacity: 0, visibility: "hidden" },
+        visible: { opacity: 100, visibility: "visible" },
+      }}
+      transition={{ duration: 0.25 }}
       className="bg-primary-1300/50 fixed top-0 bottom-0 left-0 right-0 z-50 flex justify-end px-6 py-6 pl-28 backdrop-blur-sm"
     >
       <motion.div
+        animate={ mobileMenuOpen ? "visible" : "hidden" }
+        variants={{ 
+          hidden: { x: "100%", opacity: 0, visibility: "hidden" },
+          visible: { x: "0%", opacity: 100, visibility: "visible" },
+        }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
         className="bg-primary-1400 flex basis-80 flex-col justify-between rounded-2xl noise bg-repeat px-6 py-8"
       >
         <div>
