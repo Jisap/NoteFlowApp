@@ -33,7 +33,7 @@ const FAQList = ({
       onViewportEnter={() => setInView(true)}
       onViewportLeave={() => setInView(false)}
       viewport={{ once: false, amount: "100%" }}
-      className="m-auto flex flex-col max-w-[51.625rem] gap-y-14"
+      className="m-auto flex flex-col max-w-[51.625rem] gap-y-14 max-lg:gap-y-12"
     >
       {questions.map((question) => (
         <FAQ 

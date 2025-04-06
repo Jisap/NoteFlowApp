@@ -31,7 +31,7 @@ const FAQ = ({
           />
         </div>
 
-        <p className="text-primary-50 mr-auto pr-4 text-left text-xl/loose font-medium tracking-tight">
+        <p className="text-primary-50 mr-auto pr-4 text-left text-xl/loose font-medium tracking-tight max-lg:text-lg/8 max-lg:font-semibold">
           {question.question}
         </p>
 
@@ -46,7 +46,7 @@ const FAQ = ({
       </button>
 
       <motion.p
-        className="text-primary-100 pt-0 pr-14 pl-20 text-lg/8 font-light"
+        className="text-primary-100 pt-0 pr-14 pl-20 text-lg/8 font-light max-lg:text-base/loose"
         initial={{ opacity: 0, maxHeight: 0, visibility: "hidden" }}
         animate={
           activeQuestion === question.id ? {
