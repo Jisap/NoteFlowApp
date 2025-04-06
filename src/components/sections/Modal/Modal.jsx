@@ -11,7 +11,7 @@ const Modal = ({ children, modal }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 backdrop-blur-sm flex items-center justify-center px-24 py-32"
+      className="fixed inset-0 z-50 backdrop-blur-sm flex items-center justify-center px-24 py-32 max-lg:px-8"
       variants={{
         hidden: { opacity: 0, visibility: "hidden" },
         visible: { opacity: 100, visibility: "visible" },
