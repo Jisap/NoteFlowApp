@@ -29,14 +29,14 @@ const FAQs = () => {
 
   return (
     <section className="bg-gradient-to-bottom justify-items-center">
-      <div className="w-full max-w-[90rem] py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8">
-        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight">
+      <div className="w-full max-w-[90rem] py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
+        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight max-md:mb-4 max-md:text-left">
           Frequently Asked Question
         </h2>
         
         <div className="mb-8 text-xl/loose font-light max-lg:text-lg/8">
-          <p className="text-primary-100 text-center">
-            The most commonly asked question about NoteFlow.<br/>
+          <p className="text-primary-100 text-center max-md:text-left">
+            The most commonly asked question about NoteFlow.<br className="max-md:hidden"/>
             Have any other questions ?{" "} 
             <a href="#" className="underline decoration-1 underline-offset-3">
               Chat with our expert tech team
@@ -44,7 +44,7 @@ const FAQs = () => {
           </p>
         </div>
 
-        <ul className="mb-16 flex flex-wrap justify-center gap-x-3 gap-y-4 max-lg:mb-18">
+        <ul className="mb-16 flex flex-wrap justify-center gap-x-3 gap-y-4 max-lg:mb-18 max-md:justify-start">
           {frequentlyAskedQuestions.map((obj) => (
             <li key={obj.id}>
               <button 
