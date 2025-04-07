@@ -7,7 +7,7 @@ import ContextualReminders from "../../assets/graphics/ContextualReminders.webp"
 const Features = () => {
   return (
     <section className="bg-primary-1500 overflow-hidden noise bg-repeat">
-      <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8">
+      <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         <div className="bg-primary-1300 -translate-[50%] absolute top-[50%] left-[100%] h-[62.5rem] w-[62.5rem] rounded-full opacity-100 blur-[40rem] max-xl:h-[35rem] max-xl:blur-[10rem] max-xl:w-[35rem] max-lg:left-[90%] max-lg:h-[20rem] max-lg:w-[20rem]" />
         
         <h2 className="mb-28 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-18 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight">
@@ -15,15 +15,15 @@ const Features = () => {
           <span className="text-primary-500 primary-glow">Supercharge </span> Your Note Taking
         </h2>
 
-        <div className="mb-20 grid grid-cols-2 items-center gap-x-16 max-xl:mb-12">
+        <div className="mb-20 grid grid-cols-2 items-center gap-x-16 max-xl:mb-12 max-md:mb-16 max-md:grid-cols-1 max-md:gap-y-10">
           <figure>
             <img 
               src={SmartOganization}
               alt="Smart Organization IPhone Graphic"
-              className="max-h-[45rem]"
+              className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center"
             />
           </figure>
-          <div className="z-1 max-w-lg justify-self-end">
+          <div className="z-1 max-w-lg justify-self-end max-md:grid-cols-1 max-md:gap-y-10 max-md:row-start-1 max-md:max-w-max">
             <p className="mb-8 text-5xl/16 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-4xl/10 max-lg:mb-4 max-lg:text-3xl/12">
               Smart Organization
             </p>
@@ -36,8 +36,8 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 items-center gap-x-16">
-          <div className="max-w-lg justify-self-start">
+        <div className="grid grid-cols-2 items-center gap-x-16 max-md:grid-cols-1 max-md:gap-y-10">
+          <div className="max-w-lg justify-self-start max-md:max-w-max">
             <p className="mb-8 text-5xl/16 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-4xl/10 max-lg:mb-4 max-lg:text-3xl/12">
               Contextual Reminders
             </p>
@@ -53,7 +53,7 @@ const Features = () => {
             <img
               src={ContextualReminders}
               alt="Contextual Reminders IPhone Graphic"
-              className="max-h-[45rem]"
+              className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center"
             />
           </figure>
         </div>
