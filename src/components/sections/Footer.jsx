@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-bottom">
       <div className="m-auto flex max-w-[90rem] justify-between px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:grid max-lg:gap-y-18 max-lg:px-8 max-md:px-6 max-sm:pb-16">
-        <div className="">
+        <div>
           <a href="#" className="flex items-center gap-x-3 max-md:gap-x-2">
             <Logo 
               className="stroke-primary-500 max-md:h-5" 
