@@ -37,8 +37,8 @@ const SignUpModal = () => {
 
 
   return (
-    <section className="grid grid-cols-2 max-w-3xl ">
-      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4b noise bg-repeat p-10 text-center max-md:px-6 max-md:py-8">
+    <section className="grid grid-cols-2 max-w-3xl max-sm:w-96 max-sm:grid-cols-1">
+      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4b noise bg-repeat p-10 text-center max-md:px-6 max-md:py-8 max-sm:hidden">
         <h4 className="text-primary-50 text-4xl/12 font-bold tracking-tight max-md:text-3xl/10">
           Lets Get You signedUp
         </h4>
@@ -47,7 +47,7 @@ const SignUpModal = () => {
         </p>
       </div>
 
-      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 noise bg-repeat p-10 max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 noise bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button 
           className="border-primary-75 hover:bg-primary-75 group transition-properties ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
           onClick={() => setActiveModal("")}
@@ -90,7 +90,7 @@ const SignUpModal = () => {
         <div>
           <div 
             onClick={() => setChecked((prev) => !prev)}
-            className="m-auto mb-4 w-fit cursor-pointer gap-x-2"
+            className="m-auto mb-4 w-fit cursor-pointer gap-x-2 max-sm:mb-3"
           >
             <button
               className={`border-primary-100 transition-properties mr-2 inline-flex h-4 w-4 cursor-pointer items-center justify-center
