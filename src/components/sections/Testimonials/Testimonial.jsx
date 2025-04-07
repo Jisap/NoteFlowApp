@@ -10,9 +10,9 @@ const Testimonial = ({ test }) => {
       transition={{
         opacity: { duration: 0.7, ease: "easeInOut" },
       }}
-      className="bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6"
+      className="bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6 max-md:py-8"
     >
-      <div className="flex gap-x-1 pb-8">
+      <div className="flex gap-x-1 pb-8 max-md:pb-6">
         {Array.from({length: test.rating }).map((_, i) => (
           <Star key={i} className="fill-primary-100" alt="Filled star icon"/>
         ))}
@@ -21,7 +21,7 @@ const Testimonial = ({ test }) => {
         ))}
       </div>
 
-      <p className="text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose">
+      <p className="text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose max-md:pb-12">
         {test.description}
       </p>
 
